@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <title>Contact Page</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="/index.html">Resources</a>
+                    <div class="dropdown-content">
+                        <a href="/docker/docker.html">Docker</a>
+                        <a href="/podman/podman.html">Podman</a>
+                        <a href="/html/html.html">HTML</a>
+                        <a href="/css/css.html">CSS</a>
+                      
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-content">
+        <h1 style="text-align: center;">Contact Us</h1>
+        <!-- <p style="text-align: center;">Feel free to reach out to:</p> -->
+
+        <form action="sendEmail.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+        
+            <button type="submit">Submit</button>
+        </form>
+        
+    </div>
+<!-- footer -->
+<section class="footer">
+    <div class="footer-row">
+      <div class="footer-col">
+        <h4>Info</h4>
+        <ul class="links">
+          <li><a href="/contact.html">Contact Us</a></li>
+          <li><a href="/about.html">About</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Info.</h4>
+        <p>
+          Education-Portal 
+        </p>
+          <div class="icons">
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.gmail.com/">
+          <i class="far fa-envelope"></i>
+        </a>
+          <a href="https://www.github.com/" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-github"></i>
+          </a>
+        </div>
+    </div>
+    <div class="footer-text">
+    <p>© Created by Rahul Jaiswal</p>
+    </div>
+  </div>
+  </section>
+    <script src="script.js"></script>
+</body>
+</html>

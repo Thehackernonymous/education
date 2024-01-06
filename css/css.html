@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/CSS.css">
+    <title>CSS Page</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="/index.html">Resources</a>
+                    <div class="dropdown-content">
+                        <a href="/docker/docker.html">Docker</a>
+                        <a href="/podman/podman.html">Podman</a>
+                        <a href="/html/html.html">HTML</a>
+                        <a href="/css/css.html">CSS</a>
+                      
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-header">
+        <h1>CSS</h1>
+        <div class="section-navigation">
+            <button onclick="showSection('videos')">Videos</button>
+            <button onclick="showSection('links')">Links</button>
+        </div>
+    </div>
+
+    <div class="section" id="videos">
+        <h2>Videos</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ESnrn1kAD4E?si=WPgOWqLMUmMhJ5Yf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Edsxf_NBFrw?si=2Z0JzBmFOGN89Jjz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/OXGznpKZ_sA?si=eCL_Dk2KfONLIYIk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/EUtlj7xdO1o?si=g9W1hIxjvrTZaAHW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/wRNinF7YQqQ?si=pIpG22GWmMz70zSR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/K1naz9wBwKU?si=9fnKrJARitGPUQLc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/oMXdbUN6h-Q?si=Ri70f7nTPmCMmslt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/WyxzAU3p8CE?si=QkEb3qVLjMD9ZSR6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ywBg3YV2PJU?si=0lGMqCdlNPiMEEuK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/OpWjt_wbV4E?si=wjwMiv3qg5S4UQ5b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+    <!-- <div class="section" id="articles">
+        <h2>Articles</h2>
+        <p>Article 1</p>
+        <p>Article 2</p>
+    </div> -->
+<div class="size">
+    <div class="section" id="links">
+        <h2>Links</h2>
+        <ol>
+        <li><a href="https://en.wikipedia.org/wiki/CSS" target="_blank"">wikipedia</a></li>
+        <li><a href="https://www.w3schools.com/css/" target="_blank"">w3schools</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"">mozilla docs</a></li>
+        <li><a href="https://web.dev/learn/css" target="_blank"">Web.dev</a></li>
+        <li><a href="https://www.tutorialspoint.com/css/index.htm" target="_blank"">tutorialspoint</a></li>
+        <li><a href="https://www.codecademy.com/learn/learn-css" target="_blank"">codecademy</a></li>
+        <li><a href="https://www.geeksforgeeks.org/css-tutorial/" target="_blank"">geeksforgeeks</a></li>
+    </ol>
+    </div>
+</div>
+    <script src="script.js"></script>
+    <script>
+        // Hide all sections initially
+        document.getElementById('videos').style.display = 'required';
+        document.getElementById('links').style.display = 'none';
+
+        // Function to show the selected section
+        function showSection(sectionId) {
+            // Hide all sections
+            document.getElementById('videos').style.display = 'none';
+            document.getElementById('links').style.display = 'none';
+
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        // Add event listeners for navigation
+        document.getElementById('navVideos').addEventListener('click', function() {
+            showSection('videos');
+        });
+
+        document.getElementById('navLinks').addEventListener('click', function() {
+            showSection('links');
+        });
+    </script>
+    <!-- footer -->
+    <section class="footer">
+        <div class="footer-row">
+          <div class="footer-col">
+            <h4>Info</h4>
+            <ul class="links">
+              <li><a href="/contact.html">Contact Us</a></li>
+              <li><a href="/about.html">About</a></li>
+            </ul>
+          </div>
+    
+          <div class="footer-col">
+            <h4>Info.</h4>
+            <p>
+              Education-Portal 
+            </p>
+              <div class="icons">
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.gmail.com/">
+              <i class="far fa-envelope"></i>
+            </a>
+              <a href="https://www.github.com/" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-github"></i>
+              </a>
+            </div>
+        </div>
+        <div class="footer-text">
+        <p>© Created by Rahul Jaiswal</p>
+        </div>
+      </div>
+      </section>
+</body>
+</html>

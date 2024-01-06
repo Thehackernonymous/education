@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/docker/docker.css">
+    <title>Podman</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="/index.html">Resources</a>
+                    <div class="dropdown-content">
+                        <a href="/docker/docker.html">Docker</a>
+                        <a href="/podman/podman.html">Podman</a>
+                        <a href="/html/html.html">HTML</a>
+                        <a href="/css/css.html">CSS</a>
+                      
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="page-header">
+        <h1>Podman</h1>
+        <div class="section-navigation">
+            <button onclick="showSection('videos')">Videos</button>
+            <button onclick="showSection('links')">Links</button>
+        </div>
+    </div>
+
+    <div class="section" id="videos">
+        <h2>Videos</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/AB04TJvmTO0?si=RrhfZlJ7l8JxJbYD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VdbjFgqPPE8?si=2b6oIhoSahIog6A7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/5WML8gX2F1c?si=_zWwivETJUrTWmv6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/0tuoXBuuuws?si=lFQT70QhndcePGXQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+<div class="size">
+    <div class="section" id="links">
+        <h2>Links</h2>
+        <ol>
+        <li><a href="https://podman.io/" target="_blank"">Podman</a></li>
+        <li><a href="https://opensource.com/article/18/10/podman-more-secure-way-run-containers" target="_blank"">OpenSource</a></li>
+        <li><a href="https://www.redhat.com/en/topics/containers/what-is-podman" target="_blank"">Red Hat</a></li>
+        <li><a href="https://www.infoworld.com/article/3663672/what-is-podman-and-will-it-replace-docker.html" target="_blank"">infoworld</a></li>
+        <li><a href="https://minikube.sigs.k8s.io/docs/drivers/podman/" target="_blank"">Minikube</a></li>
+    </ol>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+    <script>
+        // Hide all sections initially
+        document.getElementById('videos').style.display = 'required';
+        document.getElementById('links').style.display = 'none';
+
+        // Function to show the selected section
+        function showSection(sectionId) {
+            // Hide all sections
+            document.getElementById('videos').style.display = 'none';
+            document.getElementById('links').style.display = 'none';
+
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        // Add event listeners for navigation
+        document.getElementById('navVideos').addEventListener('click', function() {
+            showSection('videos');
+        });
+
+        document.getElementById('navLinks').addEventListener('click', function() {
+            showSection('links');
+        });
+    </script>
+    <!-- footer -->
+    <section class="footer">
+        <div class="footer-row">
+          <div class="footer-col">
+            <h4>Info</h4>
+            <ul class="links">
+              <li><a href="/contact.html">Contact Us</a></li>
+              <li><a href="/about.html">About</a></li>
+            </ul>
+          </div>
+    
+          <div class="footer-col">
+            <h4>Info.</h4>
+            <p>
+              Education-Portal 
+            </p>
+              <div class="icons">
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.gmail.com/">
+              <i class="far fa-envelope"></i>
+            </a>
+              <a href="https://www.github.com/" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-github"></i>
+              </a>
+            </div>
+        </div>
+        <div class="footer-text">
+        <p>© Created by Rahul Jaiswal</p>
+        </div>
+      </div>
+      </section>
+</body>
+</html>

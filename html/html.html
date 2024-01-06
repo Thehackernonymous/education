@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/docker/docker.css">
+    <title>HTML</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="/index.html">Resources</a>
+                    <div class="dropdown-content">
+                        <a href="/docker/docker.html">Docker</a>
+                        <a href="/podman/podman.html">Podman</a>
+                        <a href="/html/html.html">HTML</a>
+                        <a href="/css/css.html">CSS</a>
+                      
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-header">
+        <h1>HTML</h1>
+        <div class="section-navigation">
+            <button onclick="showSection('videos')">Videos</button>
+            <button onclick="showSection('links')">Links</button>
+        </div>
+    </div>
+
+    <div class="section" id="videos">
+        <h2>Videos</h2>
+        <div class="video-item">
+        <!-- Add your Docker-related videos here -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/HcOc7P5BMi4?si=csF39_sPcfa9o6FZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/qz0aGYrrlhU?si=lEoiF_cKmelxMA1V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/BsDoLVMnmZs?si=f9DvS9M2tyz9EOaG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/iG2jotQo9NI?si=RPJ_EzqHCIkgAtbx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/k7ELO356Npo?si=0PTTiLmXhDtWOEdG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/5ccq_nLHneE?si=Bu0jYwTd6FuqB4iG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/rklidcZ-aLU?si=227w1b_G1XGegH7g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/byTOONVJn-k?si=4RMCRkUbDcsnJAz8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    </div>
+<div class="size">
+    <div class="section" id="links">
+        <h2>Links</h2>
+        <ol>
+            <li><a href="https://en.wikipedia.org/wiki/HTML" target="_blank"">Wikipedia</a></li>
+            <li><a href="https://www.w3schools.com/html/" target="_blank"">W3Schools</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"">Mozilla</a></li>
+            <li><a href="https://html.com/" target="_blank"">HTML</a></li>
+            <li><a href="https://www.geeksforgeeks.org/html-tutorial/" target="_blank"">geeksforgeeks</a></li>
+            <li><a href="https://www.tutorialspoint.com/html/index.htm" target="_blank"">Tutorial Point</a></li>
+        </ol>
+    </div>
+</div>
+    <script src="script.js"></script>
+    <script>
+        // Hide all sections initially
+        document.getElementById('videos').style.display = 'required';
+        document.getElementById('links').style.display = 'none';
+
+        // Function to show the selected section
+        function showSection(sectionId) {
+            // Hide all sections
+            document.getElementById('videos').style.display = 'none';
+            document.getElementById('links').style.display = 'none';
+
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        // Add event listeners for navigation
+        document.getElementById('navVideos').addEventListener('click', function() {
+            showSection('videos');
+        });
+
+        document.getElementById('navLinks').addEventListener('click', function() {
+            showSection('links');
+        });
+    </script>
+    <!-- footer -->
+    <section class="footer">
+        <div class="footer-row">
+          <div class="footer-col">
+            <h4>Info</h4>
+            <ul class="links">
+              <li><a href="/contact.html">Contact Us</a></li>
+              <li><a href="/about.html">About</a></li>
+            </ul>
+          </div>
+    
+          <div class="footer-col">
+            <h4>Info.</h4>
+            <p>
+              Education-Portal 
+            </p>
+              <div class="icons">
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.gmail.com/">
+              <i class="far fa-envelope"></i>
+            </a>
+              <a href="https://www.github.com/" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-github"></i>
+              </a>
+            </div>
+        </div>
+        <div class="footer-text">
+        <p>© Created by Rahul Jaiswal</p>
+        </div>
+      </div>
+      </section>
+</body>
+</html>
